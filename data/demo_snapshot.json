@@ -1,0 +1,161 @@
+{
+  "telemetry": {
+    "alarm_led_on": false,
+    "buzzer_on": false,
+    "cooler_on": true,
+    "door_open": false,
+    "door_violations": 0,
+    "humidity": 40,
+    "humidity_warning": false,
+    "light_adc": 1001,
+    "light_anomaly": true,
+    "light_pct": 75,
+    "mode": "AUTO",
+    "state": "COOLING",
+    "temp_violations": 0,
+    "temperature": 24,
+    "timestamp_ms": 23459
+  },
+  "event_logs": {
+    "-P4U9k0PBQQX1NEXBoRN": {
+      "detail": "pintu terbuka > 10 dtk (pelanggaran #1)",
+      "timestamp_ms": 40451,
+      "type": "ALARM_DOOR"
+    },
+    "-P4U9mUwEvq3eJizVoHL": {
+      "detail": "ESP32 mulai; kontrol lokal aktif",
+      "timestamp_ms": 4405,
+      "type": "BOOT"
+    },
+    "-P4U9om3sMJGEJMW6Snh": {
+      "detail": "pintu dibuka",
+      "timestamp_ms": 8918,
+      "type": "DOOR_OPEN"
+    },
+    "-P4U9pqIGNtcT8RmFkth": {
+      "detail": "T=24.0 mode=AUTO",
+      "timestamp_ms": 14300,
+      "type": "COOLER_ON"
+    },
+    "-P4U9wvinQ_W8Go_hbJo": {
+      "detail": "ADC=1001 <=1500; pintu tertutup",
+      "timestamp_ms": 35203,
+      "type": "LIGHT_ANOMALY"
+    },
+    "-P4UAA-XYCl0NKpd_Bjy": {
+      "detail": "sistem mulai & Wi-Fi aktif",
+      "timestamp_ms": 4303,
+      "type": "BOOT"
+    },
+    "-P4UABbiGYt7jCXyehkZ": {
+      "detail": "pintu dibuka",
+      "timestamp_ms": 4303,
+      "type": "DOOR_OPEN"
+    },
+    "-P4UAEjVbDrbEMF-m9YT": {
+      "detail": "ESP32 mulai; kontrol lokal aktif",
+      "timestamp_ms": 4155,
+      "type": "BOOT"
+    },
+    "-P4UAF_a3pT9z3IdsfPH": {
+      "detail": "ADC=1001 <=1500; pintu tertutup",
+      "timestamp_ms": 10488,
+      "type": "LIGHT_ANOMALY"
+    },
+    "-P4UAHSFlQL4ljRUNgK9": {
+      "detail": "T=24.0 mode=AUTO",
+      "timestamp_ms": 14655,
+      "type": "COOLER_ON"
+    },
+    "-P4UAJE21JnqF0_U6FLQ": {
+      "detail": "NORMAL -> COOLING",
+      "timestamp_ms": 20542,
+      "type": "STATE"
+    },
+    "-P4UATW361tx9mjn-dq-": {
+      "detail": "anomali cahaya pulih ADC=3394",
+      "timestamp_ms": 47054,
+      "type": "LIGHT_NORMAL"
+    },
+    "-P4UAYvtPXNiXT-1-RYU": {
+      "detail": "ADC=288 <=1500; pintu tertutup",
+      "timestamp_ms": 63182,
+      "type": "LIGHT_ANOMALY"
+    },
+    "-P4UAngpcGUBD_bcoNPB": {
+      "detail": "ESP32 mulai; kontrol lokal aktif",
+      "timestamp_ms": 4903,
+      "type": "BOOT"
+    },
+    "-P4UApCI_JmU2ihOmk4M": {
+      "detail": "ADC=288 <=1500; pintu tertutup",
+      "timestamp_ms": 11344,
+      "type": "LIGHT_ANOMALY"
+    },
+    "-P4UAqrFIY4jgEBUCCjS": {
+      "detail": "T=24.0 mode=AUTO",
+      "timestamp_ms": 15581,
+      "type": "COOLER_ON"
+    },
+    "-P4UAsdLD5acQjUIVbrw": {
+      "detail": "NORMAL -> COOLING",
+      "timestamp_ms": 19975,
+      "type": "STATE"
+    },
+    "-P4UBNViYeZx_geEF3bG": {
+      "detail": "T=8.7 mode=AUTO",
+      "timestamp_ms": 102285,
+      "type": "COOLER_OFF"
+    },
+    "-P4UBOwnOFZWU9paMg9O": {
+      "detail": "COOLING -> NORMAL",
+      "timestamp_ms": 107702,
+      "type": "STATE"
+    },
+    "-P4UBTcrrfNQCFuFt5tj": {
+      "detail": "RH=69.0% > 60%",
+      "timestamp_ms": 116867,
+      "type": "ALARM_HUM"
+    },
+    "-P4UBmPfwgLD_GqLRX3F": {
+      "detail": "kelembapan pulih RH=56.5%",
+      "timestamp_ms": 169511,
+      "type": "HUM_NORMAL"
+    },
+    "-P4UCHAoeswHLkggtEgw": {
+      "detail": "anomali cahaya pulih ADC=1622",
+      "timestamp_ms": 251153,
+      "type": "LIGHT_NORMAL"
+    },
+    "-P4UCRB9x-U0izezfFpY": {
+      "detail": "ADC=1291 <=1500; pintu tertutup",
+      "timestamp_ms": 279650,
+      "type": "LIGHT_ANOMALY"
+    },
+    "-P4UCkqMG4qsx_8VGsbr": {
+      "detail": "anomali cahaya pulih ADC=2275",
+      "timestamp_ms": 330336,
+      "type": "LIGHT_NORMAL"
+    },
+    "-P4UE90Ml-gOffHMmLOj": {
+      "detail": "ESP32 mulai; kontrol lokal aktif",
+      "timestamp_ms": 4402,
+      "type": "BOOT"
+    },
+    "-P4UEA1DH8uB88mXW9zC": {
+      "detail": "ADC=1001 <=1500; pintu tertutup",
+      "timestamp_ms": 8766,
+      "type": "LIGHT_ANOMALY"
+    },
+    "-P4UEE540wFrOEOVf2jc": {
+      "detail": "T=24.0 mode=AUTO",
+      "timestamp_ms": 12924,
+      "type": "COOLER_ON"
+    },
+    "-P4UEF1Wpir00b1EKZ_9": {
+      "detail": "NORMAL -> COOLING",
+      "timestamp_ms": 18208,
+      "type": "STATE"
+    }
+  }
+}

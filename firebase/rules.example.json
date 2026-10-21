@@ -1,0 +1,64 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "telemetry": {
+      ".read": "auth != null && auth.uid === 'ISI_UID_READER_STREAMLIT'",
+      ".write": "auth != null && auth.uid === 'ISI_UID_DEVICE_WOKWI'",
+      ".validate": "newData.hasChildren(['timestamp_ms', 'state', 'mode', 'cooler_on'])",
+      "timestamp_ms": {
+        ".validate": "newData.isNumber()"
+      },
+      "updated_at": {
+        ".validate": "newData.isNumber()"
+      },
+      "state": {
+        ".validate": "newData.isString()"
+      },
+      "mode": {
+        ".validate": "newData.isString() && (newData.val() === 'AUTO' || newData.val() === 'MANUAL')"
+      },
+      "cooler_on": {
+        ".validate": "newData.isBoolean()"
+      },
+      "$other": {
+        ".validate": true
+      },
+      "temperature": {
+        ".validate": "newData.isNumber()"
+      },
+      "humidity": {
+        ".validate": "newData.isNumber()"
+      }
+    },
+    "event_logs": {
+      ".read": "auth != null && auth.uid === 'ISI_UID_READER_STREAMLIT'",
+      "$event_id": {
+        ".write": "auth != null && auth.uid === 'ISI_UID_DEVICE_WOKWI' && !data.exists()",
+        ".validate": "newData.hasChildren(['type', 'detail', 'timestamp_ms'])",
+        "type": {
+          ".validate": "newData.isString() && newData.val().length <= 50"
+        },
+        "detail": {
+          ".validate": "newData.isString() && newData.val().length <= 300"
+        },
+        "timestamp_ms": {
+          ".validate": "newData.isNumber()"
+        },
+        "timestamp": {
+          ".validate": "newData.isNumber()"
+        },
+        "boot_id": {
+          ".validate": "newData.isString()"
+        },
+        "$other": {
+          ".validate": false
+        }
+      }
+    },
+    "controls": {
+      ".read": "auth != null && auth.uid === 'ISI_UID_DEVICE_WOKWI'",
+      ".write": false
+    }
+  }
+}
