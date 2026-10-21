@@ -78,7 +78,7 @@ def get_settings():
 
 settings=get_settings()
 with st.sidebar:
-    st.markdown("### 🧊 Smart Storage")
+    st.markdown("### 🧊 Smart Medicine Storage Monitoring and Alarm Management System")
     st.caption("Internet of Things · Kelompok 3")
     st.divider()
     st.markdown("**Sumber data**")
