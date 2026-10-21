@@ -1,0 +1,2 @@
+DHT sensor library for ESPx
+ArduinoJson@7.4.3

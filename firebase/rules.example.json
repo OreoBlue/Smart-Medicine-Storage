@@ -1,0 +1,39 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "telemetry": {
+      ".read": "auth != null && auth.uid === 'ISI_UID_OPERATOR'",
+      ".write": "auth != null && auth.uid === 'ISI_UID_DEVICE'",
+      ".validate": "newData.hasChildren(['updated_at', 'state', 'cooler_on', 'mode', 'boot_id'])",
+      "updated_at": { ".validate": "newData.isNumber()" },
+      "cooler_on": { ".validate": "newData.isBoolean()" },
+      "state": { ".validate": "newData.isString()" },
+      "mode": { ".validate": "newData.isString() && (newData.val() === 'AUTO' || newData.val() === 'MANUAL')" },
+      "boot_id": { ".validate": "newData.isString()" },
+      "$other": { ".validate": true }
+    },
+    "controls": {
+      ".read": "auth != null && (auth.uid === 'ISI_UID_OPERATOR' || auth.uid === 'ISI_UID_DEVICE')",
+      ".write": "auth != null && auth.uid === 'ISI_UID_OPERATOR'",
+      ".validate": "newData.hasChildren(['mode','manual_cooler_req','inject_sensor_fault'])",
+      "mode": { ".validate": "newData.isString() && (newData.val() === 'AUTO' || newData.val() === 'MANUAL')" },
+      "manual_cooler_req": { ".validate": "newData.isBoolean()" },
+      "inject_sensor_fault": { ".validate": "newData.isBoolean()" },
+      "$other": { ".validate": false }
+    },
+    "event_logs": {
+      ".read": "auth != null && auth.uid === 'ISI_UID_OPERATOR'",
+      "$event_id": {
+        ".write": "auth != null && auth.uid === 'ISI_UID_DEVICE' && !data.exists()",
+        ".validate": "newData.hasChildren(['type','detail','timestamp_ms','timestamp','boot_id'])",
+        "type": { ".validate": "newData.isString()" },
+        "detail": { ".validate": "newData.isString()" },
+        "timestamp_ms": { ".validate": "newData.isNumber()" },
+        "timestamp": { ".validate": "newData.isNumber()" },
+        "boot_id": { ".validate": "newData.isString()" },
+        "$other": { ".validate": false }
+      }
+    }
+  }
+}
