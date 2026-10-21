@@ -1,4 +1,4 @@
-"""Smart Storage Room — Kelompok 3 | READ-ONLY Streamlit monitoring."""
+"""Smart Medicine Storage Monitoring and Alarm Management System — Kelompok 3 | READ-ONLY Streamlit monitoring."""
 from __future__ import annotations
 from datetime import datetime
 from html import escape
@@ -96,7 +96,7 @@ theme="Gelap" if "Gelap" in selected_theme else "Terang"
 p=PALETTES[theme]
 st.markdown(theme_css(p),unsafe_allow_html=True)
 
-st.markdown('<div class="ss-hero"><div class="ss-eyebrow">Kelompok 3 · IoT Monitoring System</div><h1>Smart Storage Room</h1><p>Pemantauan kondisi ruang penyimpanan, aktivitas pendingin, dan manajemen alarm — dari Wokwi melalui Firebase Realtime Database.</p></div>',unsafe_allow_html=True)
+st.markdown('<div class="ss-hero"><div class="ss-eyebrow">Kelompok 3 · IoT Monitoring System</div><h1>Smart Medicine Storage Monitoring and Alarm Management System</h1><p>Pemantauan kondisi ruang penyimpanan, aktivitas pendingin, dan manajemen alarm — dari Wokwi melalui Firebase Realtime Database.</p></div>',unsafe_allow_html=True)
 
 if st.session_state.get("source_key") != source:
     st.session_state["source_key"]=source
@@ -240,6 +240,6 @@ def render_dashboard():
         st.markdown("**Tentang status koneksi:** jika firmware belum mengirim `updated_at` berbasis waktu server, aplikasi menilai aktivitas dari perubahan `timestamp_ms` yang diamati. Snapshot pertama tidak membuktikan perangkat online.")
         st.markdown("**Demo Lokal:** data dihasilkan untuk ilustrasi; tidak ada request Firebase dalam mode ini.")
 
-    st.markdown(f'<div class="ss-footer">© 2026 Kelompok 3 · Smart Storage Room | Dibaca pada {escape(datetime.now().astimezone().strftime("%d %b %Y %H:%M:%S"))} (waktu server dashboard) · Read-only monitoring</div>',unsafe_allow_html=True)
+    st.markdown(f'<div class="ss-footer">© 2026 Kelompok 3 · Smart Medicine Storage Monitoring and Alarm Management System | Dibaca pada {escape(datetime.now().astimezone().strftime("%d %b %Y %H:%M:%S"))} (waktu server dashboard) · Read-only monitoring</div>',unsafe_allow_html=True)
 
 render_dashboard()
