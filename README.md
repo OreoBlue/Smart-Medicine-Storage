@@ -1,4 +1,4 @@
-# 🧊 Smart Storage Room — IoT Monitoring Dashboard
+# 🧊 Smart Medicine Storage Monitoring and Alarm Management System — IoT Monitoring Dashboard
 
 **Kelompok 3 · Internet of Things (ITO) · UTS 2026**
 
@@ -46,12 +46,6 @@ Dashboard tidak menggunakan path `/controls`; pengendalian perangkat tetap dilak
 
 **Panduan lengkap (Windows, macOS/Linux, secrets, rules, Wokwi, GitHub, Streamlit Cloud):** [`docs/INSTALL_RUN_SECRETS.txt`](docs/INSTALL_RUN_SECRETS.txt).
 
-## ☁️ Deploy via Streamlit Community Cloud
-
-- Upload semua berkas proyek ke root repository GitHub (jangan unggah secrets asli).
-- Buka [share.streamlit.io](https://share.streamlit.io/), pilih repository dan **main file `app.py`**.
-- Pada pengaturan **Secrets**, masukkan TOML Firebase yang sama dengan konfigurasi lokal.
-- Pilih **Demo Lokal** dulu untuk pengecekan UI, lalu **Firebase Live** saat data sudah mengalir.
 
 ## 📦 Struktur Repository
 
@@ -117,9 +111,5 @@ DHT22, LDR, dan sakelar pintu merupakan input virtual Wokwi; LED biru menggambar
 
 ## 📚 Referensi
 
-- [Wokwi](https://wokwi.com/)
 - [Streamlit](https://docs.streamlit.io/)
 - [Streamlit Community Cloud](https://docs.streamlit.io/deploy/streamlit-community-cloud)
-- [Firebase RTDB REST](https://firebase.google.com/docs/database/rest/start)
-- [Firebase Anonymous Auth REST](https://firebase.google.com/docs/reference/rest/auth)
-- [Firebase RTDB Security Rules](https://firebase.google.com/docs/database/security)
