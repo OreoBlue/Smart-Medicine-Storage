@@ -1,20 +1,8 @@
 {
-  "telemetry": {
-    "alarm_led_on": false,
-    "buzzer_on": false,
-    "cooler_on": true,
-    "door_open": false,
-    "door_violations": 0,
-    "humidity": 40,
-    "humidity_warning": false,
-    "light_adc": 1001,
-    "light_anomaly": true,
-    "light_pct": 75,
-    "mode": "AUTO",
-    "state": "COOLING",
-    "temp_violations": 0,
-    "temperature": 24,
-    "timestamp_ms": 23459
+  "controls": {
+    "inject_sensor_fault": false,
+    "manual_cooler_req": false,
+    "mode": "Auto"
   },
   "event_logs": {
     "-P4U9k0PBQQX1NEXBoRN": {
@@ -157,5 +145,22 @@
       "timestamp_ms": 18208,
       "type": "STATE"
     }
+  },
+  "telemetry": {
+    "alarm_led_on": false,
+    "buzzer_on": false,
+    "cooler_on": true,
+    "door_open": false,
+    "door_violations": 0,
+    "humidity": 40,
+    "humidity_warning": false,
+    "light_adc": 1001,
+    "light_anomaly": true,
+    "light_pct": 75,
+    "mode": "AUTO",
+    "state": "COOLING",
+    "temp_violations": 0,
+    "temperature": 24,
+    "timestamp_ms": 23459
   }
 }
